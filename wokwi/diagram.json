@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Roger R. de Oliveira",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 16.2, "left": 118, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -4.76, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -80.4,
+      "left": 147.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -6.2,
+      "left": 133.55,
+      "rotate": 270,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": 251.1,
+      "left": 101.5,
+      "attrs": { "distance": "20" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "bb1:tn.1", "esp:GND.2", "black", [ "v0" ] ],
+    [ "led1:A", "bb1:tn.3", "black", [ "v0" ] ],
+    [ "ultrasonic1:GND", "bb1:tn.5", "black", [ "v9.6", "h104.4", "v-355.2", "h-28.8" ] ],
+    [ "esp:5V", "ultrasonic1:VCC", "red", [ "h-8.31", "v155.26", "h182.4" ] ],
+    [ "bb1:tp.1", "esp:25", "green", [ "v0" ] ],
+    [ "esp:32", "ultrasonic1:ECHO", "magenta", [ "h-19.05", "v288", "h211.2", "v-9.6" ] ],
+    [ "ultrasonic1:TRIG", "esp:33", "gold", [ "v19.2", "h-230.8", "v-192" ] ],
+    [ "r1:1", "bb1:tp.2", "", [ "$bb" ] ],
+    [ "r1:2", "led1:C", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
