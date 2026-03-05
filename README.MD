@@ -2,14 +2,6 @@
 
 Projeto da matéria de IOT, criando um sistema de sensor ultrassonico que detecta objetos em proximidade com base no som, utilizando o arduino ESP32, projeto feito em equipe.
 
-## 🎬 Demonstração em Vídeo
-
-<div align="center">
-
-
-
-</div>
-
 ### 📋 Código do Projeto
 
 Siga o código que utilizei para fazer o sistema funcionar
@@ -67,7 +59,7 @@ float obter_distancia(){
 ```
 
 ## Demonstração em Vídeo
-* [Clique Aqui]() - Vídeo do sistema funcionando
+* [Clique Aqui](https://drive.google.com/file/d/13PhM6A4kDxj7vEtYF1RpjPCohgQb-9Q4/view?usp=sharing) - Vídeo do sistema funcionando
 
 ## Software Utilizado
 
